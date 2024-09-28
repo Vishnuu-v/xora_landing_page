@@ -1,6 +1,6 @@
 'use client'
-import TestimonialItem from "@/components/TestimonialItem";
-import { testimonials } from "@/constants";
+import TestimonialItem from "../components/TestimonialItem";
+import { testimonials } from "../constants";
 
 const Testimonials: React.FC = () => {
     const halfLength = Math.floor(testimonials.length / 2)

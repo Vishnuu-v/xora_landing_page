@@ -1,7 +1,7 @@
 'use client'
 
-import FAQItem from "@/components/FAQItem";
-import { faq } from "@/constants";
+import FAQItem from "../components/FAQItem";
+import { faq } from "../constants";
 import { Element } from "react-scroll";
 
 const FAQ: React.FC = () => {

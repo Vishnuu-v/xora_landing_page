@@ -1,4 +1,4 @@
-import { socials } from "@/constants";
+import { socials } from "../constants";
 import Link from "next/link";
 
 const Footer: React.FC = () => {

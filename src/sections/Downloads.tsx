@@ -1,7 +1,7 @@
 "use client";
 
-import { Marker } from "@/components/Marker";
-import { links, logos } from "@/constants";
+import { Marker } from "../components/Marker";
+import { links, logos } from "../constants";
 import Image from "next/image";
 import Link from "next/link";
 import { Element } from "react-scroll";
