@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { socials } from "../constants";
 import Link from "next/link";
 
@@ -22,7 +23,7 @@ const Footer: React.FC = () => {
             {socials.map(({ id, url, icon, title }) => (
               <li key={id}>
                 <Link href={url} className="social-icon">
-                  <img
+                  <Image
                     src={icon}
                     alt={title}
                     className="size-1/3 object-contain"

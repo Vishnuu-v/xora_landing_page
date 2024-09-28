@@ -1,11 +1,12 @@
-'use client'
+"use client";
 
 import { Element } from "react-scroll";
 import { useState } from "react";
 import clsx from "clsx";
 import CountUp from "react-countup";
 import Button from "../components/Button";
-import { plans } from "../constants/index"; 
+import { plans } from "../constants/index";
+import Image from "next/image";
 
 interface Plan {
   id: string;
@@ -47,20 +48,20 @@ const Pricing: React.FC = () => {
               <div
                 className={clsx(
                   "g4 rounded-14 before:h-100 pricing-head_btn_before absolute left-2 top-2 h-[calc(100%-16px)] w-[calc(50%-8px)] overflow-hidden shadow-400 transition-transform duration-500",
-                  !monthly && "translate-x-full",
+                  !monthly && "translate-x-full"
                 )}
               />
             </div>
 
             <div className="pricing-bg">
-              <img
+              <Image
                 src="/images/bg-outlines.svg"
                 width={960}
                 height={380}
                 alt="outline"
                 className="relative z-2"
               />
-              <img
+              <Image
                 src="/images/bg-outlines-fill.png"
                 width={960}
                 height={380}
@@ -84,15 +85,15 @@ const Pricing: React.FC = () => {
                 <div
                   className={clsx(
                     "absolute left-0 right-0 z-2 flex items-center justify-center",
-                    index === 1 ? "-top-6" : "-top-6 xl:-top-11",
+                    index === 1 ? "-top-6" : "-top-6 xl:-top-11"
                   )}
                 >
-                  <img
+                  <Image
                     src={plan.logo}
                     alt={plan.title}
                     className={clsx(
                       "object-contain drop-shadow-2xl",
-                      index === 1 ? "size-[120px]" : "size-[88px]",
+                      index === 1 ? "size-[120px]" : "size-[88px]"
                     )}
                   />
                 </div>
@@ -100,13 +101,13 @@ const Pricing: React.FC = () => {
                 <div
                   className={clsx(
                     "relative flex flex-col items-center",
-                    index === 1 ? "pt-24" : "pt-12",
+                    index === 1 ? "pt-24" : "pt-12"
                   )}
                 >
                   <div
                     className={clsx(
                       "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
-                      index === 1 ? "border-p3 text-p3" : "border-p1 text-p1",
+                      index === 1 ? "border-p3 text-p3" : "border-p1 text-p1"
                     )}
                   >
                     {plan.title}
@@ -116,7 +117,7 @@ const Pricing: React.FC = () => {
                     <div
                       className={clsx(
                         "h-num flex items-start",
-                        index === 1 ? "text-p3" : "text-p4",
+                        index === 1 ? "text-p3" : "text-p4"
                       )}
                     >
                       ${" "}
@@ -137,7 +138,7 @@ const Pricing: React.FC = () => {
                 <div
                   className={clsx(
                     "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
-                    index === 1 && "border-b",
+                    index === 1 && "border-b"
                   )}
                 >
                   {plan.caption}
@@ -145,8 +146,11 @@ const Pricing: React.FC = () => {
 
                 <ul className="mx-auto space-y-4 xl:px-7">
                   {plan.features.map((feature: string) => (
-                    <li key={feature} className="relative flex items-center gap-5">
-                      <img
+                    <li
+                      key={feature}
+                      className="relative flex items-center gap-5"
+                    >
+                      <Image
                         src="/images/check.png"
                         alt="check"
                         className="size-10 object-contain"
